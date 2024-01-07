@@ -1,0 +1,16 @@
+.courseBg{
+    background-image: url('../public/banner\ 2.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.tealBg{
+    background-color: #072E33;
+}
+.btnBorder{
+    border: 2px solid #0F969C;
+}
+.skyBg{
+    background-color: #0F969C;
+}
+  

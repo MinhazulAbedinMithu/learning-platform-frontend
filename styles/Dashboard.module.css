@@ -1,0 +1,21 @@
+.tealBgHover:hover{
+    cursor: pointer;
+    background-color: #072E33;
+}
+.tealBg{
+    background-color: #072E33;
+}
+.skyBlueBg{
+    background-color: #0F969C;
+}
+.uploadBtn{
+    display: inline-block;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    margin-top: 1rem;
+  }
+.btnBg{
+    background-color: #03353C;
+}

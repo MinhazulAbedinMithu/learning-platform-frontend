@@ -1,0 +1,25 @@
+.darkTealBg{
+  background-color: #05161A;
+}
+.tealBg{
+  background-color: #072E33;
+}
+.bannerBg{
+  background-image: url('../public/banner\ 1.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.transparentTealBg{
+  background-color: #05161ae1;
+  border: 2px #0F969C solid;
+}
+.courseBg{
+  background-image: url('../public/banner\ 2.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.tealTransparentBg{
+  background-color: #072e33d3;
+}
