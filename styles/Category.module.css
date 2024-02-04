@@ -1,0 +1,38 @@
+.categoryBanner {
+    position: relative;
+    background-image: url('../public/code_g1133705410\ 1.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(7, 46, 51, 0.7); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.coursesBg{
+    background-image: url('../public/banner\ 2.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.darkTealBg{
+    background-color: #05161A;
+}
+.hiredBg{
+    background-image: url('../public/banner\ 2.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.tealBg{
+    background-color: #072E33;
+}
+
+  
