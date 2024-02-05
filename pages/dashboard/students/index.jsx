@@ -37,7 +37,7 @@ const Students = () => {
             <tbody
               className={`${styles.skyBlueBg} text-lg font-semibold text-white`}
             >
-              <tr className="bg-base-200">
+              <tr className=" ">
                 <th>1</th>
                 <td>Md. Momin khan</td>
                 <td>Web Dev</td>
@@ -51,7 +51,7 @@ const Students = () => {
                 </td>
               </tr>
 
-              <tr className="bg-base-200">
+              <tr className=" ">
                 <th>2</th>
                 <td>Sumaya Bintay Eshak</td>
                 <td>Graphics Design</td>
@@ -65,7 +65,7 @@ const Students = () => {
                 </td>
               </tr>
 
-              <tr className="bg-base-200">
+              <tr className=" ">
                 <th>3</th>
                 <td>Fahim Wahid Rafi</td>
                 <td>Data structure and Algorithm</td>
@@ -79,7 +79,7 @@ const Students = () => {
                 </td>
               </tr>
 
-              <tr className="bg-base-200">
+              <tr className=" ">
                 <th>4</th>
                 <td>Sumaiya</td>
                 <td>Digital Marketing</td>
@@ -92,7 +92,7 @@ const Students = () => {
                   </button>
                 </td>
               </tr>
-              <tr className="bg-base-200">
+              <tr className=" ">
                 <th>5</th>
                 <td>Wahid Rafi</td>
                 <td>Web Dev</td>
@@ -106,7 +106,7 @@ const Students = () => {
                 </td>
               </tr>
 
-              <tr className="bg-base-200">
+              <tr className=" ">
                 <th>6</th>
                 <td>Khan Momin</td>
                 <td>Full stack Army</td>

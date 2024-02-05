@@ -37,7 +37,7 @@ const Courses = () => {
             <tbody
               className={`${styles.skyBlueBg} text-lg font-semibold text-white`}
             >
-              <tr className="bg-base-200">
+              <tr className=" ">
                 <th>1</th>
                 <td>Web Development</td>
                 <td>Sumit Saha</td>
@@ -51,7 +51,7 @@ const Courses = () => {
                 </td>
               </tr>
 
-              <tr className="bg-base-200">
+              <tr className=" ">
                 <th>2</th>
                 <td>App Development</td>
                 <td>Momin Khan</td>
@@ -65,7 +65,7 @@ const Courses = () => {
                 </td>
               </tr>
 
-              <tr className="bg-base-200">
+              <tr className=" ">
                 <th>3</th>
                 <td>Digital Marketing</td>
                 <td>Shamim Hossain</td>
@@ -79,7 +79,7 @@ const Courses = () => {
                 </td>
               </tr>
 
-              <tr className="bg-base-200">
+              <tr className=" ">
                 <th>4</th>
                 <td>Graphics Design</td>
                 <td>Momin khan</td>
@@ -92,7 +92,7 @@ const Courses = () => {
                   </button>
                 </td>
               </tr>
-              <tr className="bg-base-200">
+              <tr className=" ">
                 <th>5</th>
                 <td>Data structure and Algorithm</td>
                 <td>Shahriar Shubin</td>
@@ -106,7 +106,7 @@ const Courses = () => {
                 </td>
               </tr>
 
-              <tr className="bg-base-200">
+              <tr className=" ">
                 <th>6</th>
                 <td>Full stack Army</td>
                 <td>HM Nayeem</td>
@@ -119,7 +119,7 @@ const Courses = () => {
                   </button>
                 </td>
               </tr>
-              <tr className="bg-base-200">
+              <tr className=" ">
                 <th>7</th>
                 <td>Laravel Expert</td>
                 <td>Hasin Hayder</td>
