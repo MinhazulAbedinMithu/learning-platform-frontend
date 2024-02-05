@@ -1,25 +1,25 @@
-.darkTealBg{
-  background-color: #05161A;
+.darkTealBg {
+  background-color: #05161a;
 }
-.tealBg{
-  background-color: #072E33;
+.tealBg {
+  background-color: #072e33;
 }
-.bannerBg{
-  background-image: url('../public/banner\ 1.png');
+.bannerBg {
+  background-image: url("../public/banner\ 1.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
-.transparentTealBg{
+.transparentTealBg {
   background-color: #05161ae1;
-  border: 2px #0F969C solid;
+  border: 2px #0f969c solid;
 }
-.courseBg{
-  background-image: url('../public/banner\ 2.png');
+.courseBg {
+  background-image: url("../public/banner\ 2.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
-.tealTransparentBg{
+.tealTransparentBg {
   background-color: #072e33d3;
 }

@@ -1,12 +1,18 @@
 import Image from "next/image";
 import styles from "../../styles/Dashboard.module.css";
+import Link from "next/link";
 
 export default function MyCourseCard({ img, title, progress, instructor }) {
+  const slug = title.split(" ").join("-").toLowerCase();
   return (
-    <div>
+    <Link href={`mycourses/${slug}`}>
       <div className={`w-full bg-cyan-900/50 card shadow-xl cursor-pointer`}>
         <div>
-          <Image src={img} alt={title} width="100%" className="rounded-t-lg" />
+          <Image
+            src={img}
+            alt={title}
+            className="rounded-t-lg w-full h-[300px]"
+          />
         </div>
         <div className="w-full card-body">
           <div className="flex w-full md:mb-4">
@@ -27,6 +33,6 @@ export default function MyCourseCard({ img, title, progress, instructor }) {
           </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 }

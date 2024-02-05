@@ -2,6 +2,8 @@ import { useState } from "react";
 import DashboardNavbar from "../../../components/Shared/DashboardNavbar";
 import MyCourseCard from "../../../components/Dashboard/MyCourseCard";
 import imgWebPoster from "../../../public/web-poster.webp";
+import imgAppPoster from "../../../public/app-dev.jpeg";
+import imgReduxPoster from "../../../public/react-redux-poster.png";
 
 export default function Mycourses() {
   const [isSidebarOpen, setSidebarOpen] = useState(true);
@@ -24,7 +26,7 @@ export default function Mycourses() {
         <h2 className="text-4xl font-bold text-center py-8 text-white">
           Enrolled Course
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
           <MyCourseCard
             img={imgWebPoster}
             title="Web Development"
@@ -32,21 +34,15 @@ export default function Mycourses() {
             instructor="Sumit Saha"
           />
           <MyCourseCard
-            img={imgWebPoster}
-            title="Web Development"
-            progress="67"
-            instructor="Sumit Saha"
+            img={imgAppPoster}
+            title="App Development"
+            progress="23"
+            instructor="Programming Hero"
           />
           <MyCourseCard
-            img={imgWebPoster}
-            title="Web Development"
-            progress="67"
-            instructor="Sumit Saha"
-          />
-          <MyCourseCard
-            img={imgWebPoster}
-            title="Web Development"
-            progress="67"
+            img={imgReduxPoster}
+            title="React Js Development"
+            progress="46"
             instructor="Sumit Saha"
           />
         </div>

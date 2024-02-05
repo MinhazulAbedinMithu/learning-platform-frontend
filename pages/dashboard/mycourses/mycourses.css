@@ -1,0 +1,5 @@
+.coverphoto {
+  background: url("../../../public/web-poster.webp") top left no-repeat;
+  width: 100%;
+  height: 300px;
+}
