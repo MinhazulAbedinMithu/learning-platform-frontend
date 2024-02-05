@@ -46,48 +46,14 @@ export default function DashboardNavbar({ isSidebarOpen, toggleSidebar }) {
       setSelectedNav("assignment");
     } else if (path.includes("/dashboard/certificate")) {
       setSelectedNav("certificate");
+    } else if (path.includes("/dashboard/createAssignments")) {
+      setSelectedNav("createAssignments");
+    } else if (path.includes("/dashboard/courses")) {
+      setSelectedNav("courses");
+    } else if (path.includes("/dashboard/students")) {
+      setSelectedNav("students");
     }
   }, [router.asPath]);
-
-  // useEffect(() => {
-  //   const path = router.asPath;
-  //   if (path.includes("/dashboard/addCourse")) setSelectedNav("addCourse");
-  // }, [router.asPath]);
-
-  // useEffect(() => {
-  //   const path = router.asPath;
-  //   if (path.includes("/dashboard/analytics")) setSelectedNav("analytics");
-  // }, [router.asPath]);
-
-  // useEffect(() => {
-  //   const path = router.asPath;
-  //   if (path.includes("/dashboard/leaderboard")) setSelectedNav("leaderboard");
-  // }, [router.asPath]);
-
-  // useEffect(() => {
-  //   const path = router.asPath;
-  //   if (path.includes("/dashboard/classjoining")) setSelectedNav("classjoin");
-  // }, [router.asPath]);
-
-  // useEffect(() => {
-  //   const path = router.asPath;
-  //   if (path.includes("/dashboard/mycourses")) setSelectedNav("mycourses");
-  // }, [router.asPath]);
-
-  // useEffect(() => {
-  //   const path = router.asPath;
-  //   if (path.includes("/dashboard/recordings")) setSelectedNav("recording");
-  // }, [router.asPath]);
-
-  // useEffect(() => {
-  //   const path = router.asPath;
-  //   if (path.includes("/dashboard/assignment")) setSelectedNav("assignment");
-  // }, [router.asPath]);
-
-  // useEffect(() => {
-  //   const path = router.asPath;
-  //   if (path.includes("/dashboard/certificate")) setSelectedNav("certificate");
-  // }, [router.asPath]);
 
   return (
     <aside
@@ -164,6 +130,18 @@ export default function DashboardNavbar({ isSidebarOpen, toggleSidebar }) {
                   onClick={() => setSelectedNav("courses")}
                 >
                   <p>Courses</p>
+                </li>
+              </Link>
+              <Link href="/dashboard/createAssignments">
+                <li
+                  className={`${
+                    selectedNav === "createAssignments" ? styles.tealBg : ""
+                  } ${
+                    styles.tealBgHover
+                  } mb-2 p-4 flex justify-between items-center`}
+                  onClick={() => setSelectedNav("createAssignments")}
+                >
+                  <p>Create Assignments</p>
                 </li>
               </Link>
             </>
