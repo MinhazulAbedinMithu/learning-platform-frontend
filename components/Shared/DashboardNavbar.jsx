@@ -5,7 +5,11 @@ import {
   BsBell,
 } from "react-icons/bs";
 import { IoAnalyticsOutline } from "react-icons/io5";
-import { MdLeaderboard, MdAssignmentAdd, MdAddCircleOutline } from "react-icons/md";
+import {
+  MdLeaderboard,
+  MdAssignmentAdd,
+  MdAddCircleOutline,
+} from "react-icons/md";
 import { SiGoogleclassroom } from "react-icons/si";
 import { VscOutput } from "react-icons/vsc";
 import { SlCamrecorder } from "react-icons/sl";
@@ -24,48 +28,66 @@ export default function DashboardNavbar({ isSidebarOpen, toggleSidebar }) {
 
   useEffect(() => {
     const path = router.asPath;
-    if (path.includes("/dashboard")) setSelectedNav("dashboard");
+    if (path.includes("/dashboard")) {
+      setSelectedNav("dashboard");
+    } else if (path.includes("/dashboard/addCourse")) {
+      setSelectedNav("addCourse");
+    } else if (path.includes("/dashboard/analytics")) {
+      setSelectedNav("analytics");
+    } else if (path.includes("/dashboard/leaderboard")) {
+      setSelectedNav("leaderboard");
+    } else if (path.includes("/dashboard/classjoining")) {
+      setSelectedNav("classjoin");
+    } else if (path.includes("/dashboard/mycourses")) {
+      setSelectedNav("mycourses");
+    } else if (path.includes("/dashboard/recordings")) {
+      setSelectedNav("recording");
+    } else if (path.includes("/dashboard/assignment")) {
+      setSelectedNav("assignment");
+    } else if (path.includes("/dashboard/certificate")) {
+      setSelectedNav("certificate");
+    }
   }, [router.asPath]);
 
-  useEffect(() => {
-    const path = router.asPath;
-    if (path.includes("/dashboard/addCourse")) setSelectedNav("addCourse");
-  }, [router.asPath]);
+  // useEffect(() => {
+  //   const path = router.asPath;
+  //   if (path.includes("/dashboard/addCourse")) setSelectedNav("addCourse");
+  // }, [router.asPath]);
 
-  useEffect(() => {
-    const path = router.asPath;
-    if (path.includes("/dashboard/analytics")) setSelectedNav("analytics");
-  }, [router.asPath]);
+  // useEffect(() => {
+  //   const path = router.asPath;
+  //   if (path.includes("/dashboard/analytics")) setSelectedNav("analytics");
+  // }, [router.asPath]);
 
-  useEffect(() => {
-    const path = router.asPath;
-    if (path.includes("/dashboard/leaderboard")) setSelectedNav("leaderboard");
-  }, [router.asPath]);
+  // useEffect(() => {
+  //   const path = router.asPath;
+  //   if (path.includes("/dashboard/leaderboard")) setSelectedNav("leaderboard");
+  // }, [router.asPath]);
 
-  useEffect(() => {
-    const path = router.asPath;
-    if (path.includes("/dashboard/classjoining")) setSelectedNav("classjoin");
-  }, [router.asPath]);
+  // useEffect(() => {
+  //   const path = router.asPath;
+  //   if (path.includes("/dashboard/classjoining")) setSelectedNav("classjoin");
+  // }, [router.asPath]);
 
-  useEffect(() => {
-    const path = router.asPath;
-    if (path.includes("/dashboard/mycourses")) setSelectedNav("mycourses");
-  }, [router.asPath]);
+  // useEffect(() => {
+  //   const path = router.asPath;
+  //   if (path.includes("/dashboard/mycourses")) setSelectedNav("mycourses");
+  // }, [router.asPath]);
 
-  useEffect(() => {
-    const path = router.asPath;
-    if (path.includes("/dashboard/recordings")) setSelectedNav("recording");
-  }, [router.asPath]);
+  // useEffect(() => {
+  //   const path = router.asPath;
+  //   if (path.includes("/dashboard/recordings")) setSelectedNav("recording");
+  // }, [router.asPath]);
 
-  useEffect(() => {
-    const path = router.asPath;
-    if (path.includes("/dashboard/assignment")) setSelectedNav("assignment");
-  }, [router.asPath]);
+  // useEffect(() => {
+  //   const path = router.asPath;
+  //   if (path.includes("/dashboard/assignment")) setSelectedNav("assignment");
+  // }, [router.asPath]);
 
-  useEffect(() => {
-    const path = router.asPath;
-    if (path.includes("/dashboard/certificate")) setSelectedNav("certificate");
-  }, [router.asPath]);
+  // useEffect(() => {
+  //   const path = router.asPath;
+  //   if (path.includes("/dashboard/certificate")) setSelectedNav("certificate");
+  // }, [router.asPath]);
 
   return (
     <aside
@@ -105,8 +127,8 @@ export default function DashboardNavbar({ isSidebarOpen, toggleSidebar }) {
               </div>
             </li>
           </Link>
-          {
-            user?.role==='admin' && (
+          {user?.role === "admin" && (
+            <>
               <Link href="/dashboard/addCourse">
                 <li
                   className={`${
@@ -120,8 +142,32 @@ export default function DashboardNavbar({ isSidebarOpen, toggleSidebar }) {
                   <MdAddCircleOutline />
                 </li>
               </Link>
-            )
-          }
+              <Link href="/dashboard/students">
+                <li
+                  className={`${
+                    selectedNav === "students" ? styles.tealBg : ""
+                  } ${
+                    styles.tealBgHover
+                  } mb-2 p-4 flex justify-between items-center`}
+                  onClick={() => setSelectedNav("students")}
+                >
+                  <p>Students</p>
+                </li>
+              </Link>
+              <Link href="/dashboard/courses">
+                <li
+                  className={`${
+                    selectedNav === "courses" ? styles.tealBg : ""
+                  } ${
+                    styles.tealBgHover
+                  } mb-2 p-4 flex justify-between items-center`}
+                  onClick={() => setSelectedNav("courses")}
+                >
+                  <p>Courses</p>
+                </li>
+              </Link>
+            </>
+          )}
           {user?.role !== "admin" && (
             <>
               <Link href="/dashboard/analytics">
