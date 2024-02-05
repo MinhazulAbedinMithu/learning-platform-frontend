@@ -19,12 +19,13 @@ import {
 import { createWrapper } from "next-redux-wrapper";
 
 const persistConfig = {
-  key: "root",
+  key: "auth",
   storage,
 };
+const persistedAuthReducer = persistReducer(persistConfig, authReducer);
 
 const reducers = combineReducers({
-  auth: authReducer,
+  auth: persistedAuthReducer,
   message: messageReducer,
   loading: loadingReducer,
   category: categoryReducer,
@@ -32,10 +33,8 @@ const reducers = combineReducers({
   singleCourse: singleCourseReducer,
 });
 
-const persistedReducer = persistReducer(persistConfig, reducers);
-
 const store = configureStore({
-  reducer: persistedReducer,
+  reducer: reducers,
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
       serializableCheck: {
